@@ -1,4 +1,4 @@
-function quandlget(id::String; order="des", rows=100, frequency="daily", transformation="none", 
+function quandlget(id::ASCIIString; order="des", rows=100, frequency="daily", transformation="none", 
                    from="", to="", format="TimeArray", auth_token="")
 
     # Create a dictionary with the Query arguments that we pass to get() function
@@ -117,7 +117,7 @@ function interactivequandl(query::ASCIIString; page="1", results="20", order="de
     end
 end
 
-function set_auth_token(token::String)
+function set_auth_token(token::ASCIIString)
 
     # Check the validity of the token
     if length(token) != 20 && length(token) != 0
